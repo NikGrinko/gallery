@@ -1,0 +1,68 @@
+.gallery {
+    user-select: none;
+    height: 100%;
+    padding-bottom: 30px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        li {
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
+        &-item {
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 10px;
+            transition: 1.35s;
+            &:hover {
+                box-shadow: 0px 0px 30px #53f39e;
+                transition: 0.55s;
+                .item-avatar {
+                    img {
+                        transform: scale(1.1);
+                        transition: 0.35s;
+                    }
+                }
+            }
+
+            display: flex;
+            .item-avatar {
+                flex: 1 1 25%;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                height: 200px;
+                max-width: 250px;
+                img {
+                    width: 100%;
+                    transition: 0.25s;
+                    height: 100%;
+
+                    object-fit: cover;
+                }
+            }
+            .item-name {
+                flex: 1 1 25%;
+                margin-left: 20px;
+                font-family: "Montserrat";
+                font-weight: 600;
+                font-size: 27px;
+                display: flex;
+                align-items: center;
+                color: rgba(142, 13, 224, 0.55);
+            }
+            .item-count {
+                flex: 1 1 25%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Montserrat";
+                font-weight: 600;
+                font-size: 25px;
+                color: rgba(142, 13, 224, 0.55);
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.intro {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(265deg, rgba(100, 38, 221, 1) 2%, rgba(205, 0, 51, 1) 98%);
+    user-select: none;
+
+    &__media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../media/intro-back.jpg);
+        background-color: linear-gradient(195deg, rgba(100, 38, 221, 1) 2%, rgba(205, 0, 51, 0.8) 98%);
+        background-size: cover;
+
+        video {
+            width: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+        }
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba($color: #000000, $alpha: 0.45);
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        &-title {
+            color: white;
+            font-family: "Monoton";
+            text-shadow: 4px 2px 5px #262fdd;
+            text-transform: uppercase;
+            font-size: 54px;
+        }
+        &-button {
+            margin-top: 220px;
+            background-color: transparent;
+            border-radius: 5px;
+            font-family: "Audiowide";
+            text-transform: uppercase;
+            font-size: 14px;
+            color: white;
+            .svg-wrapper {
+                margin-top: 0;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                border-radius: 3px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            #shape {
+                stroke-width: 6px;
+                fill: transparent;
+                stroke: #009ffd;
+                stroke-dasharray: 170 800;
+                stroke-dashoffset: -440;
+                transition: 1s all ease;
+            }
+            #text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                z-index: 20;
+                color: white;
+                text-decoration: none;
+                font-weight: 100;
+                font-size: 20px;
+            }
+            .svg-wrapper:hover #shape {
+                stroke-dasharray: 50 0;
+                stroke-width: 3px;
+                stroke-dashoffset: 0;
+                stroke: #dd2657;
+            }
+        }
+    }
+}

@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Intro from './pages/StartPage';
+import { Switch, Route } from 'react-router-dom';
+import { withSuspense } from './hoc/withSuspanse';
+import { getAlbumUserAction, getAlbumCoverAction } from './redux/actions/galleryActions';
+const Gallery = React.lazy(() => import('./pages/Gallery'));
+const Album = React.lazy(() => import('./pages/Album'))
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAlbumUserAction());
+    dispatch(getAlbumCoverAction());
+  }, [])
+  const { openAlbum } = useSelector(({ gallery }) => gallery);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Switch>
+        <Route exact path='/' render={() => <Intro />} />
+        <Route exact path='/gallery' render={withSuspense(Gallery)} />
+        <Route exact path={`/gallery/album${openAlbum}`} render={withSuspense(Album)} />
+      </Switch>
     </div>
   );
 }
