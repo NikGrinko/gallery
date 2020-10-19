@@ -12,7 +12,6 @@ const Album = () => {
     const openSlider = (index) => {
         setphotoIndex(index);
         setsliderVisible(!sliderVisible);
-
     }
 
     return (
