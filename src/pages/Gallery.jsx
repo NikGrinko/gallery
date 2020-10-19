@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Header from '../components/Header';
 import { useSelector, useDispatch } from 'react-redux';
 import { setNumberAlbum } from '../redux/actions/galleryActions';
-const pathToBack = '/';
+const pathToBack = '/gallery/';
 const childToHeaderButton = 'Выйти';
 const titleToHeader = 'Ваши альбомы';
 

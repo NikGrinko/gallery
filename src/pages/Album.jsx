@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import { useSelector } from 'react-redux';
 import Slider from '../components/Slider';
-const pathToBack = '/gallery';
+const pathToBack = '/gallerys';
 const childToHeaderButton = 'Перейти назад';
 
 const Album = () => {
