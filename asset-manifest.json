@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/NikGrinko/gallery/static/css/main.288dcfca.chunk.css",
+    "main.js": "/NikGrinko/gallery/static/js/main.f97db632.chunk.js",
+    "main.js.map": "/NikGrinko/gallery/static/js/main.f97db632.chunk.js.map",
+    "runtime-main.js": "/NikGrinko/gallery/static/js/runtime-main.7cdef5a9.js",
+    "runtime-main.js.map": "/NikGrinko/gallery/static/js/runtime-main.7cdef5a9.js.map",
+    "static/js/2.ffe79faf.chunk.js": "/NikGrinko/gallery/static/js/2.ffe79faf.chunk.js",
+    "static/js/2.ffe79faf.chunk.js.map": "/NikGrinko/gallery/static/js/2.ffe79faf.chunk.js.map",
+    "static/js/3.68989799.chunk.js": "/NikGrinko/gallery/static/js/3.68989799.chunk.js",
+    "static/js/3.68989799.chunk.js.map": "/NikGrinko/gallery/static/js/3.68989799.chunk.js.map",
+    "static/js/4.7e2a303e.chunk.js": "/NikGrinko/gallery/static/js/4.7e2a303e.chunk.js",
+    "static/js/4.7e2a303e.chunk.js.map": "/NikGrinko/gallery/static/js/4.7e2a303e.chunk.js.map",
+    "index.html": "/NikGrinko/gallery/index.html",
+    "precache-manifest.b7efe08232b3cbfae3f0176f346c8291.js": "/NikGrinko/gallery/precache-manifest.b7efe08232b3cbfae3f0176f346c8291.js",
+    "service-worker.js": "/NikGrinko/gallery/service-worker.js",
+    "static/css/main.288dcfca.chunk.css.map": "/NikGrinko/gallery/static/css/main.288dcfca.chunk.css.map",
+    "static/js/2.ffe79faf.chunk.js.LICENSE.txt": "/NikGrinko/gallery/static/js/2.ffe79faf.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/NikGrinko/gallery/static/media/intro-back.a3137295.jpg",
+    "static/media/intro.mp4": "/NikGrinko/gallery/static/media/intro.7f35861d.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7cdef5a9.js",
+    "static/js/2.ffe79faf.chunk.js",
+    "static/css/main.288dcfca.chunk.css",
+    "static/js/main.f97db632.chunk.js"
+  ]
+}
