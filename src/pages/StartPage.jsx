@@ -11,7 +11,7 @@ const Intro = () => {
             </div>
             <div className='intro__content'>
                 <h1 className='intro__content-title'>Gallery</h1>
-                <NavLink to='/gallery' className='intro__content-button'><div className="svg-wrapper">
+                <NavLink to='/gallerys' className='intro__content-button'><div className="svg-wrapper">
                     <svg height="80" width="300" xmlns="http://www.w3.org/2000/svg">
                         <rect id="shape" height="80" width="300" />
                     </svg>

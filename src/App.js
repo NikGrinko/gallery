@@ -19,8 +19,8 @@ function App() {
     <div className="app">
       <Switch>
         <Route exact path='/' render={() => <Intro />} />
-        <Route exact path='/gallery' render={withSuspense(Gallery)} />
-        <Route exact path={`/gallery/album${openAlbum}`} render={withSuspense(Album)} />
+        <Route exact path='/gallerys' render={withSuspense(Gallery)} />
+        <Route exact path={`/gallerys/album${openAlbum}`} render={withSuspense(Album)} />
       </Switch>
     </div>
   );

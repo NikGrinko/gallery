@@ -25,7 +25,7 @@ const Gallery = () => {
                             id: item.id,
                             name: item.title
                         })} key={item.id}>
-                            <NavLink to={`/gallery/album${item.id}`} className='gallery__list-item'>
+                            <NavLink to={`/gallerys/album${item.id}`} className='gallery__list-item'>
                                 <div className="item-avatar">
                                     <img src={cover[index].url} alt="album avatar" />
                                 </div>
