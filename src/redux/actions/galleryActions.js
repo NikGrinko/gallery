@@ -16,11 +16,11 @@ export const getAlbumCoverAction = () => (dispatch) => {
             dispatch(getCover(response.data))
         })
 }
-export const setNumberAlbum = (id) => (dispatch) => {
+export const setNumberAlbum = (data) => (dispatch) => {
 
     dispatch({
         type: SET_NUMBER_ALBUM,
-        payload: id
+        payload: data
     })
 
     jsonPlaceholderApi.getPhotos()

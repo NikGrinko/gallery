@@ -13,13 +13,13 @@ const initialState = {
         title: "accusamus beatae ad facilis cum similique qui sunt",
         url: "https://via.placeholder.com/600/92c952"
     }],
-    openAlbum: null
+    openAlbum: null,
+    openAlbumName: ''
 }
 
 const galleryReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_ALBUM:
-
             return {
                 ...state,
                 albums: action.payload.filter((item) => item.userId === 1)
@@ -27,7 +27,6 @@ const galleryReducer = (state = initialState, action) => {
         case GET_COVER:
             const getArr = action.payload.filter((item) => item.albumId <= 10)
             const newArr = [];
-
             function search(nameKey, myArray) {
                 for (let i = 0; i < myArray.length; i++) {
                     if (getArr[i].albumId === nameKey) {
@@ -38,7 +37,6 @@ const galleryReducer = (state = initialState, action) => {
             for (let k = 1; k <= 10; k++) {
                 newArr.push(search(k, getArr))
             }
-
             return {
                 ...state,
                 cover: newArr
@@ -49,13 +47,14 @@ const galleryReducer = (state = initialState, action) => {
                 photo: action.payload.filter((item) => item.albumId === state.openAlbum)
             }
         case SET_NUMBER_ALBUM:
+
             return {
                 ...state,
-                openAlbum: action.payload
+                openAlbum: action.payload.id,
+                openAlbumName: action.payload.name
             };
         default:
             return state
     }
-
 }
 export default galleryReducer;

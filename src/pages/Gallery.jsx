@@ -10,9 +10,9 @@ const titleToHeader = 'Ваши альбомы';
 const Gallery = () => {
     const dispatch = useDispatch();
     const { albums, cover } = useSelector(({ gallery }) => gallery);
-    console.log(cover)
-    const setOpenAlbum = (id) => {
-        dispatch(setNumberAlbum(id))
+
+    const setOpenAlbum = (data) => {
+        dispatch(setNumberAlbum(data))
     }
 
     return (
@@ -21,13 +21,16 @@ const Gallery = () => {
                 <Header pathToBack={pathToBack} childToHeaderButton={childToHeaderButton} titleToHeader={titleToHeader} />
                 <ul className='gallery__list'>
                     {albums.map((item, index) => (
-                        <li onClick={() => setOpenAlbum(item.id)} key={item.id}>
+                        <li onClick={() => setOpenAlbum({
+                            id: item.id,
+                            name: item.title
+                        })} key={item.id}>
                             <NavLink to={`/gallery/album${item.id}`} className='gallery__list-item'>
                                 <div className="item-avatar">
                                     <img src={cover[index].url} alt="album avatar" />
                                 </div>
                                 <div className="item-name">{item.title}</div>
-                                <div className="item-count">{cover[index].lenght}</div>
+                                <div className="item-count">50 фото</div>
                             </NavLink>
                         </li>
                     )

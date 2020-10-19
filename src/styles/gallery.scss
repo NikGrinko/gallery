@@ -2,6 +2,9 @@
     user-select: none;
     height: 100%;
     padding-bottom: 30px;
+    @media (max-width: 1400px) {
+        padding: 0 20px;
+    }
     &__list {
         display: flex;
         flex-direction: column;
@@ -16,6 +19,10 @@
             border-radius: 10px;
             padding: 10px;
             transition: 1.35s;
+            @media (max-width: 600px) {
+                flex-direction: column;
+                align-items: center;
+            }
             &:hover {
                 box-shadow: 0px 0px 30px #53f39e;
                 transition: 0.55s;
@@ -52,6 +59,9 @@
                 display: flex;
                 align-items: center;
                 color: rgba(142, 13, 224, 0.55);
+                @media (max-width: 600px) {
+                    text-align: center;
+                }
             }
             .item-count {
                 flex: 1 1 25%;
