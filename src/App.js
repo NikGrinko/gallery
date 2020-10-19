@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="app">
       <Switch>
-        <Route exact path='/' render={() => <Intro />} />
+        <Route exact path='/gallery/' render={() => <Intro />} />
         <Route exact path='/gallerys' render={withSuspense(Gallery)} />
         <Route exact path={`/gallerys/album${openAlbum}`} render={withSuspense(Album)} />
       </Switch>
